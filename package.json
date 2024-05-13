@@ -13,6 +13,7 @@
         "dev": "npm-run-all --parallel build:watch server"
     },
     "devDependencies": {
+        "@types/node": "^20.12.11",
         "@types/react": "^18.3.2",
         "@types/react-dom": "^18.3.0",
         "@violentmonkey/types": "^0.1.7",
