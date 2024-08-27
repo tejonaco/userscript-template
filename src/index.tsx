@@ -1,12 +1,11 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
 import App from "./App";
 import { awaitElement } from "./utils";
+import { render } from "preact";
 import './index.css'
 
 
 async function main() {
-  // EDIT THIS TO INSERT CONTAINER IN THE RIGHT SITE
+  // EDIT THIS TO INSERT CONTAINER ON THE RIGHT PLACE
   const parent = await awaitElement('#root');
   const container = document.createElement("div");
   parent.appendChild(container)
@@ -22,11 +21,8 @@ async function loadCSS () {
 
 
 async function insertElement(Element: React.ComponentType, container: HTMLElement) {
-    const root = createRoot(container);
-    root.render(
-        <React.StrictMode>
-            <Element />
-        </React.StrictMode>
+    render(<Element />,
+      container
     );
 }
 

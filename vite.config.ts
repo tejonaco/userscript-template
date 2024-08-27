@@ -1,11 +1,11 @@
-import react from '@vitejs/plugin-react';
+import preact from '@preact/preset-vite'
 import { ConfigEnv, UserConfig, defineConfig } from "vite";
 import fs from 'fs';
 
 
 export default defineConfig((mode: ConfigEnv): UserConfig => {
   return {
-    plugins: [react()],
+    plugins: [preact()],
     build: {
       target: "esnext",
       minify: false,
