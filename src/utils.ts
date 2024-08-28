@@ -3,12 +3,12 @@ import pkg from '../package.json'
 
 const myConsole = console // save original console, just in case site overwrites handy methods such as log
 
-export function log(object: Object) {
-    myConsole.log(
-        `%c${pkg.name}:`,
-        'color: orange; font-weight: bold',
-        object
-    );
+export function log(message: any, ...optionalParams: any[]) {
+  myConsole.log(
+      `%c${pkg.name}:`,
+      'color: orange; font-weight: bold',
+      message, ...optionalParams
+  );
 }
 
 
